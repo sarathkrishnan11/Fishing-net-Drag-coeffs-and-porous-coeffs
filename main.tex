@@ -49,26 +49,47 @@ flow under various attack angles and incoming velocities. ( A concern in velocit
 validating with experiments by Zhan et al (2016) : Totally three kinds of net panels with different solidity ratios were studied in the experiments. The mesh for all the three nets were square diamond pattern. They calculated parameters for obtaining quadratic drag coeffs. Drag force was over predicted upto 40 percent  at 0.5 m/s and 30ª angle of attack. relative errors of most of the cases are less than 20 percent they say.
  Errors vary with different net cases : this shows a lack of good porous resistance coefficients ? for net 3, all drag forces were under estimated showing problems in coefficients a and b.
 They have also done validations on current interactions with circular fish cages for aqua culture and wave interaction with net panels.
-They carried out sensitivity analysis on porous resistance coeffs to know if they are in reasonable bounds when taking account uncertainties of numerical model. The uncertainties of the porous resistance coefficients come from the following: The drag force coefficient of the twines for a fishing net was assigned with a 10 percent uncertainty due to, i.e. misreading of the figure for drag force coefficients, difference between the shape of the real twine and a cylinder, etc. The projected area S1 and S2 for the in-plane and out-of-plane twines were varied with 5 percent, since they were usually calculated based on the mesh distance and the overall dimension of the fishing nets, therefore there exists round-off errors.
+They carried out sensitivity analysis on porous resistance coeffs to know if they are in reasonable bounds when taking account uncertainties of numerical model. The uncertainties of the porous resistance coefficients come from the following: The drag force coefficient of the twines for a fishing net was assigned with a 10 percent uncertainty due to, i.e. misreading of the figure for drag force coefficients, difference between the shape of the real twine and a cylinder,etc. The projected area S1 and S2 for the in-plane and out-of-plane twines were varied with 5 percent, since they were usually calculated based on the mesh distance and the overall dimension of the fishing nets, therefore there exists round-off errors.
 \subsection{Second paper : Development of a numerical model for fluid-structure interaction analysis
 of flow through and around an aquaculture net cage}
 More detailed paper on FSI for aquaculture net cages. A coupled problem was solved by porous media model for fluid and lumped mass structural solver with an efficient data exchange via RAM. The structural code was implemented inside the Pimple loop. A deforming mesh technique was used for representing rotating porous zone. A flow chart given for FSI. fluid model took more time than solid model. 
 
 %----------------------------------------------------------------------------------------
 
-\section{Chapter: Contributions on the theory of fishing gears and related marine systems Vol 9 }
+\section{Vol 9 Contributions on the theory of fishing gears and related marine systems}
 
 \subsection{The Hydrodynamic drag coeffs of flat netting at longitudinal flow - V.Naumov, N.Agievich}
 Coefficient of hydrodynamic drag of a flat netting (Net parallel to the flow) depends on Reynolds number calculated by taking Length of the netting as characteristic length and \(omega\) : relation of threads area to projected area, and \(small delta\) : thickness on the thread to length of the netting. there exist three different areas of drag where Cd is proportional, inversely proportional and independent of Re(L)
 
-considering the flow over a flat plate, since the netting is not really a hydro-dynamically smooth surface, roughness has to be considered. Ratio of delta/l , where delta is avg irregularities and l is boundary layer thickness plays important role. As 'l' boundary layer thickness increases downstream, this ratio decreases.  so the front and rear will behave differently in terms of hydrodynamic resistance due to roughness.
+considering the flow over a flat plate, since the netting is not really a hydro-dynamically smooth surface, roughness has to be considered. Ratio of $\Delta/l$ , where $\Delta$ is average irregularities and l is boundary layer thickness plays important role. As 'l' boundary layer thickness increases downstream, this ratio decreases.  so the front and rear will behave differently in terms of hydrodynamic resistance due to roughness.
 
 Re1 : 2.4*10⁵ 
 Re2 : 2*10⁶
 
 when ReL less than Re1, inversely proportional to Cd by -0.16
 when ReL between Re1 and Re2 proportional to Cd by a power of 0.14
-ReL greater than Re2, independent of Rel
+ReL greater than Re2, independent of Rel 
+They have provided the equations to find Cd for different velocities and compared it with some experiments conducted by other authors.
+%------------------------------------------------------------------------------------------
+\subsection{Impact of net shape and angle of attack on flow through net panel : Experimental study - christian Semlow, Mathias Paschen}
+Purpose is to provide a validation data for CFD studies (Aquaculture). Hot wire probes and prandtl's tube where the sensors used to find the flow and pressure in the vicinity of the net.
+Definition of porosity of the mesh : 
+\begin{equation}
+    \phi= 1 - \frac{d}{a}*\frac{1}{u_1*u_2}
+\end{equation}
+Where $u_1$ is the hanging ratio given by $sin\gamma$, $\gamma$ is the angle of arrangement of rhombic mesh. No information about $u_2$ is in the paper. 
+They notice a significant increase in velocity in the netting plane area compared to the undisturbed flow. the rate id velocity in the netting plane area corresponds to the porosity and is in accordance with continuity equation. Orientation of the net and hanging ratio have visibile impact on velocity distribution.
+
+
+%-------------------------------------------------------------------------------------------------
+\section{Vol 8 : Contributions on theory of fishing gears and related marine systems}
+\subsection{the hydrodynamic drag coeffs of flat netting at cross flow- V Naumov, N. Velicanov}
+
+
+
+
+
+
 
 \section{Theory}
 
