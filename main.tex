@@ -25,34 +25,19 @@
 \maketitle
 
 \begin{abstract}
-In this experiment we studied a very important physical effect by measuring the
-dependence of a quantity $V$ of the quantity $X$ for two different sample
-temperatures.  Our experimental measurements confirmed the quadratic dependence
-$V = kX^2$ predicted by Someone's first law. The value of the mystery parameter
-$k = 15.4\pm 0.5$~s was extracted from the fit. This value is
-not consistent with the theoretically predicted $k_{theory}=17.34$~s. We attribute this
-discrepancy to low efficiency of our $V$-detector.
+
 \end{abstract}
 
-%------------------------------------------------------------------------------------------------
-\section{Chapter: works of E. Christensen and H. Chen}
 
-\subsection{First Paper : Investigations on porous resistance coeffs for fishing net structures}
+\section{Vol 10 Contributions on theory of fishing gears and related marine systems}
+\subsection{Study on hydrodynamic characteristics of net panel using cfd analysis Y.Takahashi}
+CFD simulations by treating twines as solid bodies and finding drag force and comparing Cd,Cf from them with experimental works by Dong et al. (2016). The drag and lift coefficients were under estimated comparing the experimental values. They say this is because of the design of shape of the nets. Cd decreases with a decrease in hanging angle when $\theta < 60$. Twine angle : angle between each twine and flow direction.
+$$ \phi = \cos^{-1}{(\cos{\phi}\cos{\theta})}$$
 
-In the first paper which says about the investigations on the porous resistance coeffs, They have come up with an analytical solution for porous coeffs from physical parameters of fishing nets. Probably they might have modified the porous media flow solver in order to apply their approach in the simulation.  They have both Cm ( for inertial effect due to the presence of porous skelton) and S (resistance force) which consist of porous coeff matrices D and C. D comes in a linear term while C is in quadratic term which is the major part of the resistance force.
-About neglecting D : This assumption was further justified by the physical explanation: Fishing nets are composed of twines with very small diameters, typical in the order of millimeters, the quadratic drag force is the dominant force for such kind of marine structures. Inertia and other forces are secondary.
-Morison's equation and volume averaged NS for porous media are compared to find the equations for forces acting on the porous media. As morison's force model does not consider the interactions between nets, 2 coefficients a,b were introduced to predict the forces more accurately.Velocity inside porous media and undisturbed velocity have negligible difference and they are assumed to be same!
-The equations involve angle of attacks and velocity directions. To implement this in a trawling nets could lead to edit the solver.
+Note : Tauti’s (1934) theory on hydrodynamic forces of net panels. (Read)
 
-VALIDATION : The first validation case is based on the experimental data presented in Patursson (2007) for a plane net panel in current
-flow under various attack angles and incoming velocities. ( A concern in velocity reduction from a porous baffle model if it is modeled as surface.! Will it provide the same velocity ( Even directions ) as the flow in reality? Stream lines will be deflecting near the net. But when we  make it as a porous surface, it wont right?)
-validating with experiments by Zhan et al (2016) : Totally three kinds of net panels with different solidity ratios were studied in the experiments. The mesh for all the three nets were square diamond pattern. They calculated parameters for obtaining quadratic drag coeffs. Drag force was over predicted upto 40 percent  at 0.5 m/s and 30ª angle of attack. relative errors of most of the cases are less than 20 percent they say.
- Errors vary with different net cases : this shows a lack of good porous resistance coefficients ? for net 3, all drag forces were under estimated showing problems in coefficients a and b.
-They have also done validations on current interactions with circular fish cages for aqua culture and wave interaction with net panels.
-They carried out sensitivity analysis on porous resistance coeffs to know if they are in reasonable bounds when taking account uncertainties of numerical model. The uncertainties of the porous resistance coefficients come from the following: The drag force coefficient of the twines for a fishing net was assigned with a 10 percent uncertainty due to, i.e. misreading of the figure for drag force coefficients, difference between the shape of the real twine and a cylinder,etc. The projected area S1 and S2 for the in-plane and out-of-plane twines were varied with 5 percent, since they were usually calculated based on the mesh distance and the overall dimension of the fishing nets, therefore there exists round-off errors.
-\subsection{Second paper : Development of a numerical model for fluid-structure interaction analysis
-of flow through and around an aquaculture net cage}
-More detailed paper on FSI for aquaculture net cages. A coupled problem was solved by porous media model for fluid and lumped mass structural solver with an efficient data exchange via RAM. The structural code was implemented inside the Pimple loop. A deforming mesh technique was used for representing rotating porous zone. A flow chart given for FSI. fluid model took more time than solid model. 
+Drag coefficients decreases with a decrease in the hanging angle at small angle of attack due to the decrease in the twine angle. Drag force acting on trawl net may be reduced by choosing the appropriate hanging angle.
+ 
 
 %----------------------------------------------------------------------------------------
 
@@ -72,7 +57,7 @@ ReL greater than Re2, independent of Rel
 They have provided the equations to find Cd for different velocities and compared it with some experiments conducted by other authors.
 %------------------------------------------------------------------------------------------
 \subsection{Impact of net shape and angle of attack on flow through net panel : Experimental study - christian Semlow, Mathias Paschen}
-Purpose is to provide a validation data for CFD studies (Aquaculture). Hot wire probes and prandtl's tube where the sensors used to find the flow and pressure in the vicinity of the net.
+Purpose is to provide a validation data for CFD studies (Aquaculture). Hot wire probes and prandtl's tube were the sensors used to find the flow and pressure in the vicinity of the net.
 Definition of porosity of the mesh : 
 \begin{equation}
     \phi= 1 - \frac{d}{a}*\frac{1}{u_1*u_2}
@@ -85,123 +70,52 @@ They notice a significant increase in velocity in the netting plane area compare
 \section{Vol 8 : Contributions on theory of fishing gears and related marine systems}
 \subsection{The hydrodynamic drag coeffs of flat netting at cross flow- V Naumov, N. Velicanov}
 To find the drag coeff of flat netting when flow is parallel to the net. Old tries to find the analytical formula for drag coeffs are given. Inorder to find the critical Reynolds number, experiments are conducted for low Reynolds numbers. ($Re < 150$) The details regarding experimental set up used is given.
-Theory of stochastic functions has been used for processing the experimental data. The formula to find the critical reynolds number's is given. Cd doesnot depend on reynolds number after Re is higher than higher limit critical value ReK. 
+Theory of stochastic functions has been used for processing the experimental data. The formula to find the critical reynolds number's is given. Cd does not depend on reynolds number after Re is higher than higher limit critical value ReK. 
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\section{Vol. 7 Contributions on theory of fishing gears and related marine systems}
+\subsection{Numerical investigation for underwater fluid-structure interaction problem : Ilyes MNASSRI, David LE TOUZÉ, Benoit Vincent, Bertrand ALESANDRINI}
+Sea water is often considered as a fluid with uniform velocity and intensity and the effects of small turbulances are neglected. This small inaccuracy in the first step of the net prediction leads to a large error in the form of simulated nets and finally drag forces are under estimated. Objective of this CFD package is to provide a quantitative description of entire flow field in terms of pressure and velocity around the knots of submerged net structures. Goal is to couple the structural model with surrounding fluid flow to predict morison's forces more accurately.
+%------------------------------------------------------------------------------------------------
+
+\subsection{Experimental analysis of the hydrodynamic coefficients of the net panels in the flume tank in Hirtshals : Nina MADSEN, Kurt HANSEN, Birger ENERHAUG}
+experiments with different netting of different opening to provide hydrodynamic drag coefficients of the netting. Some details regarding the experimental set used are given. Used an underwater motion tracking system to investigate more details. values on Cd and Cl at different angle of attacks are given which can be useful for comparisons.A porosity model proposed by Gjosund et al (2010) was tested against the measured data. The correlation among both is very poor. Model lacks in showing the strong dependence of porosity and Reynolds number.
+A pure empirical model was developed and fitted with measured values. With the results they claim to be able to represent the dependency of angle of attack and drag,lift coeffs with basic mathematical functions independent of twine diameter and mesh opening.
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\subsection{Hydrodynamic loads on 2 Dimensional sheets of netting within the range of small angles of attack : Mathias PASCHEN, Karsten BREDDERMANN}
+Discussions on experimental and numerical analysis of stiff net grid made of aluminium. This study aims in understanding the behaviour of fluid near to the netting and hydrodynamic loads of net grids. Tests are carried out in wind tunnels and end plates were used to avoid 3 dimensional effects. Front plate and aft plate to get a smooth circulation around front panel and to simulate the clogging effect caused by the fish catch. Numerical model used to compare is a solid model with around 6 million cells. They concluded on the enormous effects experimental set up had on their results. Fluid flow close to the netting can be influenced because of the flexibility and complex behaviour of fishing nets and predicting those are essential for  calculating  Cd and Cl accurately. What they are asking for is a very strong coupling between solid and fluid model.
+%---------------------------------------------------------------------------
 
 
 
+%---------------------------------------------------------------------------------
+\section{Chapter: works of E. Christensen and H. Chen}
+
+\subsection{First Paper : Investigations on porous resistance coeffs for fishing net structures}
+
+In the first paper which says about the investigations on the porous resistance coeffs, They have come up with an analytical solution for porous coeffs from physical parameters of fishing nets. Probably they might have modified the porous media flow solver in order to apply their approach in the simulation.  They have both Cm ( for inertial effect due to the presence of porous skelton) and S (resistance force) which consist of porous coeff matrices D and C. D comes in a linear term while C is in quadratic term which is the major part of the resistance force.
+About neglecting D : This assumption was further justified by the physical explanation: Fishing nets are composed of twines with very small diameters, typical in the order of millimeters, the quadratic drag force is the dominant force for such kind of marine structures. Inertia and other forces are secondary.
+Morison's equation and volume averaged NS for porous media are compared to find the equations for forces acting on the porous media. As morison's force model does not consider the interactions between nets, 2 coefficients a,b were introduced to predict the forces more accurately.Velocity inside porous media and undisturbed velocity have negligible difference and they are assumed to be same!
+The equations involve angle of attacks and velocity directions. To implement this in a trawling nets could lead to edit the solver.
+
+VALIDATION : The first validation case is based on the experimental data presented in Patursson (2007) for a plane net panel in current
+flow under various attack angles and incoming velocities. ( A concern in velocity reduction from a porous baffle model if it is modeled as surface.! Will it provide the same velocity ( Even directions ) as the flow in reality? Stream lines will be deflecting near the net. But when we  make it as a porous surface, it wont right?)
+validating with experiments by Zhan et al (2016) : Totally three kinds of net panels with different solidity ratios were studied in the experiments. The mesh for all the three nets were square diamond pattern. They calculated parameters for obtaining quadratic drag coeffs. Drag force was over predicted up to 40 percent  at 0.5 m/s and 30ª angle of attack. relative errors of most of the cases are less than 20 percent they say.
+ Errors vary with different net cases : this shows a lack of good porous resistance coefficients ? for net 3, all drag forces were under estimated showing problems in coefficients a and b.
+They have also done validations on current interactions with circular fish cages for aqua culture and wave
+interaction with net panels.
+They carried out sensitivity analysis on porous resistance coeffs to know if they are in reasonable bounds when taking account uncertainties of numerical model. The uncertainties of the porous resistance coefficients come from the following: The drag force coefficient of the twines for a fishing net was assigned with a 10 percent uncertainty due to, i.e. misreading of the figure for drag force coefficients, difference between the shape of the real twine and a cylinder,etc. The projected area S1 and S2 for the in-plane and out-of-plane twines were varied with 5 percent, since they were usually calculated based on the mesh distance and the overall dimension of the fishing nets, therefore there exists round-off errors.
+\subsection{Second paper : Development of a numerical model for fluid-structure interaction analysis
+of flow through and around an aquaculture net cage}
+More detailed paper on FSI for aquaculture net cages. A coupled problem was solved by porous media model for fluid and lumped mass structural solver with an efficient data exchange via RAM. The structural code was implemented inside the Pimple loop. A deforming mesh technique was used for representing rotating porous zone. A flow chart given for FSI. fluid model took more time than solid model. 
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+\section{Numerical simulation of the effects of fish behaviour on flow dynamics around net cage : M.F.Tang,etc}
+$k-\omega$ SST and large deformation non-linear FEM coupled to achieve interaction between flow and net cage with one way coupling. Since it is a net cage , they have modelled the velocity distribution caused the movement of fish too. The coefficients are similar to the one in OpenFoam. Not a lot of information regarding the coupling is given. Meshing was done on the net very fine, taking net as a solid surface. Experiment with one end of the net not fixed was carried out. Details regarding fish stocking and their effects are there.
 
-\section{Theory}
-
-Here give a brief summary of the physical effect of interest and provide
-necessary equations. Here is how you insert an equation. According to
-references~\cite{melissinos, Cyr, Wiki} the dependence of interest is given
-by
-\begin{equation} \label{eq:aperp} % the label is used to reference the equation
-u(\lambda,T)=\frac{8\pi hc\lambda^{-5}}{e^{hc/\lambda kT}-1},
-\end{equation}
-where T is temperature in Kelvin, c is the speed of light, etc. Don't forget to
-explain what each variable means the first time that you introduce it.
-
-
-\section{Procedures}
-
-Give a schematic of the experimental setup(s) used in the experiment (see
-figure~\ref{fig:samplesetup}). Give the description of  abbreviations
-either in the figure caption or in the text. Write a description of what is
-going on. 
-
-\begin{figure}[ht] 
-        % read manual to see what [ht] means and for other possible options
-        \centering \includegraphics[width=0.8\columnwidth]{sr_setup}
-        % note that in above figure file name, "sr_setup",
-        % the file extension is missing. LaTeX is smart enough to find
-        % apropriate one (i.e. pdf, png, etc.)
-        % You can add this extention yourself as it seen below
-        % both notations are correct but above has more flexibility
-        %\includegraphics[width=1.0\columnwidth]{sr_setup.pdf}
-        \caption{
-                \label{fig:samplesetup} % spaces are big no-no withing labels
-                % things like fig: are optional in the label but it helps
-                % to orient yourself when you have multiple figures,
-                % equations and tables
-                Every figure MUST have a caption.
-        }
-\end{figure}
-
-Don't forget to list all important steps in your experimental procedure!
-
-Use active voice either in past or present through all the report and be
-consistent with it:
-The laser light comes  from to ... and eventually arrived to the
-balanced photodiode as seen in the figure~\ref{fig:samplesetup}.
-
-Sentences in the past voice while correct are generally considered hard to read
-in large numbers. The laser light was directed to ..., wave plates were set
-to ... etc.
-
-
-\section{Analysis}
-
-In this section you will need to show your experimental results. Use tables and
-graphs when it is possible. Table~\ref{tbl:bins} is an example.
-
-\begin{table}[ht]
-\begin{center}
-\caption{Every table needs a caption.}
-\label{tbl:bins} % spaces are big no-no withing labels
-\begin{tabular}{|cc|} 
-\hline
-\multicolumn{1}{|c}{$x$ (m)} & \multicolumn{1}{c|}{$V$ (V)} \\
-\hline
-0.0044151 &   0.0030871 \\
-0.0021633 &   0.0021343 \\
-0.0003600 &   0.0018642 \\
-0.0023831 &   0.0013287 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-
-Analysis of equation~\ref{eq:aperp} shows ...
-
-Note: this section can be integrated with the previous one as long as you
-address the issue. Here explain how you determine uncertainties for different
-measured values. Suppose that in the experiment you make a series of
-measurements of a resistance of the wire $R$ for different applied voltages
-$V$, then you calculate the temperature from the resistance using a known
-equation and make a plot  temperature vs. voltage squared. Again suppose that
-this dependence is expected to be linear~\cite{Cyr}, and the proportionality coefficient
-is extracted from the graph. Then what you need to explain is that for the
-resistance and the voltage the uncertainties are instrumental (since each
-measurements in done only once), and they are $\dots$. Then give an equation
-for calculating the uncertainty of the temperature from the resistance
-uncertainty. Finally explain how the uncertainty of the slop of the graph was
-found (computer fitting, graphical method, \emph{etc}.)
-
-If in the process of data analysis you found any noticeable systematic
-error(s), you have to explain them in this section of the report.
-
-It is also recommended to plot the data graphically to efficiently illustrate
-any points of discussion. For example, it is easy to conclude that the
-experiment and theory match each other rather well if you look at
-Fig.~\ref{fig:samplesetup} and Fig.~\ref{fig:exp_plots}.
-
-\begin{figure}[ht] 
-  \centering
-      \includegraphics[width=0.5\columnwidth]{sr_squeezing_vs_detuning}
-
-% some figures do not need to be too wide
-        \caption{
-                \label{fig:exp_plots}  
-                Every plot must have axes labeled.
-        }
-\end{figure}
-
-
-\section{Conclusions}
-Here you briefly summarize your findings.
 
 %++++++++++++++++++++++++++++++++++++++++
 % References section will be created automatically 
@@ -211,21 +125,6 @@ Here you briefly summarize your findings.
 % Note: with this approach it is YOUR responsibility to put them in order
 % of appearance.
 
-\begin{thebibliography}{99}
-
-\bibitem{melissinos}
-A.~C. Melissinos and J. Napolitano, \textit{Experiments in Modern Physics},
-(Academic Press, New York, 2003).
-
-\bibitem{Cyr}
-N.\ Cyr, M.\ T$\hat{e}$tu, and M.\ Breton,
-% "All-optical microwave frequency standard: a proposal,"
-IEEE Trans.\ Instrum.\ Meas.\ \textbf{42}, 640 (1993).
-
-\bibitem{Wiki} \emph{Expected value},  available at
-\texttt{http://en.wikipedia.org/wiki/Expected\_value}.
-
-\end{thebibliography}
 
 
 \end{document}
